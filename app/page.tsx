@@ -1,18 +1,23 @@
 "use client";
-
-import Typewriter from "typewriter-effect";
+import Index from "./components/Index";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import Tape from "./components/Tape";
+import About from "./components/About";
 
 function page() {
   return (
-    <div className="flex justify-center items-center text-2xl h-screen  ">
-      <Typewriter
-        options={{
-          strings: ["  Comming Soon"],
-          autoStart: true,
-          loop: true,
-        }}
-      />
-    </div>
+    <main>
+      <Navbar />
+      <div className="max-w-7xl mx-auto">
+        <Hero />
+      </div>
+      <Tape />
+      <div className="max-w-7xl mx-auto">
+        <Index />
+        <About />
+      </div>
+    </main>
   );
 }
 

@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@config "../../tailwind.config.js";
+@theme {
+  --font-instrumental:
+    var(--font-instrument-serif), Inter, system-ui, sans-serif;
+  --font-jetbrains: var(--font-jetbrains-mono), monospace;
+  --font-sans: var(--font-montserrat-sans);
+  --font-Nunito: var(--font-Nunito-Sans), sans-serif;
+  --color-accent: #f2a33d;
+}
+
+@layer utilities {
+  .flexItems {
+    @apply flex justify-center items-center;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  animation: marquee 20s linear infinite;
+}
