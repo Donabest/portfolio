@@ -4,7 +4,10 @@ import Typewriter from "typewriter-effect";
 
 function Hero() {
   return (
-    <section className="relative flex justify-center items-baseline-last align-middle gap-4 mt-40 max-w-7xl ">
+    <section
+      id="Home"
+      className="relative flex justify-center items-baseline-last align-middle gap-4 mt-40 max-w-7xl "
+    >
       <div className="flex flex-col text-sm font-sans italic uppercase opacity-70 ">
         <span>Portfolio /{new Date().getFullYear()}, </span>
         <span>Web Developer,</span>

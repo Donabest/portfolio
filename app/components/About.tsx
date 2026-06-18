@@ -1,10 +1,9 @@
+import Section from "./Section";
+
 function About() {
   return (
-    <section id="About" className="border-t border-t-neutral-800 py-18">
-      <p className="tracking-widest uppercase font-Nunito text-[1.5vw]">
-        <span className="text-gray-100 border-b">01</span> About
-      </p>
-
+    <section id="About" className="border-t border-t-neutral-900 py-18">
+      <Section num="01" section="About" />
       <div className="grid grid-cols-2 gap-18 pt-18">
         <div className="font-Nunito font-normal text-neutral-300 ">
           <p>
@@ -28,22 +27,22 @@ function About() {
         </div>
 
         <div className="flex flex-col gap-6 font-sans font-medium">
-          <div className=" px-6 py-3 border border-neutral-800 rounded-2xl">
+          <div className=" px-8 py-3 border border-neutral-900 shadow-secondary-200 shadow-2xl rounded-2xl">
             <h1 className="flex gap-1 pt-2 text-[17px] font-semibold font-mono uppercase">
-              <span className="text-emerald-400  ">&bull;</span>
+              <span className="text-emerald-400 animate-pulse ">&bull;</span>
               system_status
             </h1>
-            <div className="flex justify-between items-center py-3 border-b border-b-neutral-800">
+            <div className="flex justify-between items-center py-3 border-b border-b-neutral-900">
               <p className="text-gray-200">Operator</p>
               <span className="text-[#00FFFF]">Don</span>
             </div>
 
-            <div className="flex justify-between items-center py-3 border-b border-b-neutral-800">
+            <div className="flex justify-between items-center py-3 border-b border-b-neutral-900">
               <p className="text-gray-200">Role</p>
               <span>Fronted Engineer</span>
             </div>
 
-            <div className="flex justify-between items-center py-3 border-b border-b-neutral-800">
+            <div className="flex justify-between items-center py-3 border-b border-b-neutral-900">
               <p className="text-gray-200">Focus</p>
               <span>performance</span>
             </div>
@@ -53,9 +52,9 @@ function About() {
             </div>
           </div>
 
-          <div className="px-6 py-3 border border-neutral-800 rounded-2xl">
+          <div className="px-6 py-3 border border-neutral-900 shadow-secondary-200 shadow-2xl  rounded-2xl">
             <h1 className="flex gap-1 pt-2 text-[17px] font-semibold font-mono uppercase">
-              <span className="text-emerald-400 text-gray-50">&bull;</span>
+              <span className="text-gray-50">&bull;</span>
               Spotify_Status
             </h1>
             <div className="pt-3">

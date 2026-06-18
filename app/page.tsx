@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Tape from "./components/Tape";
 import About from "./components/About";
+import Stacks from "./components/Stacks";
 
 function page() {
   return (
@@ -16,6 +17,7 @@ function page() {
       <div className="max-w-7xl mx-auto">
         <Index />
         <About />
+        <Stacks />
       </div>
     </main>
   );
