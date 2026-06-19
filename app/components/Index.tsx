@@ -8,8 +8,8 @@ const links: navLinks[] = [
     link: "#About",
   },
   {
-    nav: "[ 02 . Work ]",
-    link: "#Work",
+    nav: "[ 02 . Projects ]",
+    link: "#Projects",
   },
   {
     nav: "[ 03 . Stack ]",

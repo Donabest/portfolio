@@ -7,6 +7,7 @@ import {
 } from "next/font/google";
 import "@/app/styles/globals.css";
 import { cn } from "./lib/utils";
+import Navbar from "./components/Navbar";
 
 const MontserratSans = Montserrat({
   variable: "--font-montserrat-sans",
@@ -117,7 +118,10 @@ export default function RootLayout({
           type="application/id+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonId) }}
         />
-        {children}
+        <main>
+          <Navbar />
+          {children}
+        </main>
       </body>
     </html>
   );

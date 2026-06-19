@@ -1,15 +1,14 @@
 "use client";
 import Index from "./components/Index";
 import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
 import Tape from "./components/Tape";
 import About from "./components/About";
 import Stacks from "./components/Stacks";
+import Projects from "./components/Projects";
 
 function page() {
   return (
-    <main>
-      <Navbar />
+    <>
       <div className="max-w-7xl mx-auto">
         <Hero />
       </div>
@@ -18,8 +17,9 @@ function page() {
         <Index />
         <About />
         <Stacks />
+        <Projects />
       </div>
-    </main>
+    </>
   );
 }
 
