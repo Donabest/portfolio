@@ -28,7 +28,7 @@ function Navbar() {
     <nav className="fixed top-0 w-full p-4 text-smtext-gray-100 backdrop-blur-2xl border-b border-b-gray-900 uppercase tracking-widest z-99">
       <div className="flex justify-between items-center max-w-7xl mx-auto">
         <h1 className="group">
-          <Link href="#Home" className="flexItems group-hover:text-primary-100">
+          <Link href="/" className="flexItems group-hover:text-primary-100">
             <span className="group-hover:text-amber-500 text-4xl ">&bull;</span>
             Don
           </Link>

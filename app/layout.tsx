@@ -8,6 +8,8 @@ import {
 import "@/app/styles/globals.css";
 import { cn } from "./lib/utils";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import FloatQuickContact from "./components/FloatQuickContact";
 
 const MontserratSans = Montserrat({
   variable: "--font-montserrat-sans",
@@ -121,6 +123,8 @@ export default function RootLayout({
         <main>
           <Navbar />
           {children}
+          <FloatQuickContact />
+          <Footer />
         </main>
       </body>
     </html>

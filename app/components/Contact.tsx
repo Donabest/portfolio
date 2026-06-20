@@ -18,7 +18,7 @@ function Contact() {
           I want to hear about it. I reply fast.
         </p>
       </div>
-      <div className="flex justify-between items-start border-t border-t-neutral-900 pt-10 pb-20">
+      <div className="flex justify-between items-start border-t border-t-neutral-900 pt-10 pb-10">
         <div className="space-y-6 text-xs">
           <div className="space-y-1.5">
             <h3 className="font-mono text-gray-200 uppercase tracking-widest">

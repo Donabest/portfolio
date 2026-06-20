@@ -1,4 +1,13 @@
 import Section from "./Section";
+import dynamic from "next/dynamic";
+
+const GithubActivity = dynamic(
+  () => import("@/app/components/GithubActivity"),
+  {
+    ssr: false,
+    loading: () => <Spinner />,
+  },
+);
 
 function About() {
   return (
@@ -26,7 +35,7 @@ function About() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-6 font-sans font-medium">
+        <div className="font-sans font-medium">
           <div className=" px-8 py-3 border border-neutral-900 shadow-secondary-200 shadow-2xl rounded-2xl">
             <h1 className="flex gap-1 pt-2 text-[17px] font-semibold font-mono uppercase">
               <span className="text-emerald-400 animate-pulse ">&bull;</span>
@@ -51,9 +60,9 @@ function About() {
               <span className="text-green-400">Open for opportunities</span>
             </div>
           </div>
-
-          <div className="px-6 py-3 border border-neutral-900 shadow-secondary-200 shadow-2xl  rounded-2xl">
-            <h1 className="flex gap-1 pt-2 text-[17px] font-semibold font-mono uppercase">
+        </div>
+        <div className="col-span-2 max-w-4xl mx-auto px-6 py-3 border border-neutral-900 shadow-secondary-200 shadow-2xl  rounded-2xl">
+          {/* <h1 className="flex gap-1 pt-2 text-[17px] font-semibold font-mono uppercase">
               <span className="text-gray-50">&bull;</span>
               Spotify_Status
             </h1>
@@ -62,8 +71,9 @@ function About() {
               <span className="text-sm font-light text-gray-200">
                 come back later for tune
               </span>
-            </div>
-          </div>
+            </div> */}
+          <GithubActivity />
+          {/* <GitHubCalendar username="Donabest" /> */}
         </div>
       </div>
     </section>
@@ -71,3 +81,7 @@ function About() {
 }
 
 export default About;
+
+function Spinner() {
+  return <div className="spinner"></div>;
+}

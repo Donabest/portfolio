@@ -16,7 +16,6 @@ function ProjectCard({ project }: projectProp) {
           height={0}
           sizes="100vw"
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-103"
-          quality={80}
         />
       </div>
 
