@@ -19,3 +19,9 @@ export interface project {
   demo: string;
   github: string;
 }
+
+export interface socialContact {
+  link: string;
+  social: string;
+  socialUsername?: string;
+}

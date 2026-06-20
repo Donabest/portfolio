@@ -5,6 +5,7 @@ import Tape from "./components/Tape";
 import About from "./components/About";
 import Stacks from "./components/Stacks";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 function page() {
   return (
@@ -18,6 +19,7 @@ function page() {
         <About />
         <Stacks />
         <Projects />
+        <Contact />
       </div>
     </>
   );

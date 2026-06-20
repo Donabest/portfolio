@@ -112,3 +112,26 @@ export const Others = [
     icon: SiShadcnui,
   },
 ];
+
+export const socialContact = [
+  {
+    link: "https://twitter/@donftp",
+    social: "Twitter",
+    socialUsername: "@donftp",
+  },
+  {
+    link: "https://github.com/Donabest",
+    social: "Github",
+    socialUsername: "Donabest ",
+  },
+  {
+    link: "https://www.linkedin.com/in/rabiu-abdulazeez-968208362",
+    social: "LinkedIn",
+    socialUsername: "Rabiu Abdulazeez",
+  },
+  {
+    link: "https://www.tiktok.com/@don_abest",
+    social: "Tiktok",
+    socialUsername: "Essence",
+  },
+];
