@@ -58,7 +58,7 @@ function Index() {
           {links.map((list) => (
             <motion.li
               key={list.nav}
-              className="hover:text-primary-100"
+              className="text-primary-100/60 hover:text-primary-100"
               whileHover={{ y: -2 }}
               transition={{ type: "spring", stiffness: 800, damping: 6 }}
             >

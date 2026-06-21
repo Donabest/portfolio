@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Section from "./Section";
-import { MoveRight, MoveUpRight } from "lucide-react";
+import { MoveUpRight } from "lucide-react";
 import { socialContact } from "../data/data";
+import ContactForm from "./ContactForm";
 
 function Contact() {
   return (
@@ -59,39 +60,7 @@ function Contact() {
             </div>
           </div>
         </div>
-
-        <form className="grid grid-cols-2 gap-4">
-          <div className="space-y-3">
-            <label htmlFor="Email">Email</label>
-            <input
-              type="Email"
-              placeholder="something@company.com"
-              className="w-80"
-            />
-          </div>
-          <div className="space-y-3">
-            <label htmlFor="Subject">Subject</label>
-            <input
-              type="text"
-              placeholder="A role,a job ,a inquiring "
-              className="w-80"
-            />
-          </div>
-          <div className=" space-y-3 col-span-2">
-            <label htmlFor="Message">Message</label>
-            <textarea
-              placeholder="Tell me more about it"
-              className="w-full h-30 resize-none"
-            />
-          </div>
-
-          <button
-            type="submit"
-            className="flex items-center justify-center gap-2 bg-primary-200 text-black py-2 font-mono tracking-wide w-50 cursor-pointer hover:bg-primary-400 hover:scale-x-101"
-          >
-            Send Message <MoveRight size={14} />
-          </button>
-        </form>
+        <ContactForm />
       </div>
     </section>
   );

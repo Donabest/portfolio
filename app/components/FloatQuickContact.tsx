@@ -71,26 +71,23 @@ function FloatQuickContact() {
         >
           <ul className="flexItems space-x-3">
             {QuickContact.map((contact, i) => (
-              <>
-                <motion.li
-                  key={i}
-                  className="relative group px-3.5 py-2.5 rounded-xl hover:bg-gray-50/10"
-                  whileHover={{ y: -2 }}
-                  transition={{ type: "spring", stiffness: 900, duration: 0.5 }}
+              <motion.li
+                key={i}
+                className="relative group px-3.5 py-2.5 rounded-xl border-y border-y-neutral-600 shadow-2xl hover:bg-gray-50/10"
+                whileHover={{ y: -2 }}
+                transition={{ type: "spring", stiffness: 900, duration: 0.5 }}
+              >
+                <Link
+                  href={contact.to}
+                  rel={contact.external ? "noopener noreferer" : undefined}
+                  target={contact.external ? "_blank" : undefined}
                 >
-                  <Link
-                    href={contact.to}
-                    rel={contact.external ? "noopener noreferer" : undefined}
-                    target={contact.external ? "_blank" : undefined}
-                  >
-                    <contact.icon size={20} />
-                    <span className="absolute -top-10 left-0 text-white text-sm bg-black px-2 opacity-0 border border-gray-200 rounded-xl group-hover:opacity-100 group-hover:-translate-y-0.5 transition-transform duration-150">
-                      {contact.preview}
-                    </span>
-                  </Link>
-                </motion.li>
-                <div className="border-l border-l-secondary-400 py-3"></div>
-              </>
+                  <contact.icon size={20} />
+                  <span className="absolute -top-10 left-0 text-white text-sm px-2 opacity-0 border border-gray-200 rounded-xl group-hover:opacity-100 group-hover:-translate-y-0.5 transition-transform duration-150">
+                    {contact.preview}
+                  </span>
+                </Link>
+              </motion.li>
             ))}
           </ul>
         </motion.div>
