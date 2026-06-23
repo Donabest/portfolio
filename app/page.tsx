@@ -10,11 +10,11 @@ import Contact from "./components/Contact";
 function page() {
   return (
     <>
-      <div className="max-w-7xl mx-auto">
+      <div className="px-6 lg:max-w-7xl md:px-4 mx-auto ">
         <Hero />
       </div>
       <Tape />
-      <div className="max-w-7xl mx-auto">
+      <div className="px-6 lg:max-w-7xl md:px-4 mx-auto">
         <Index />
         <About />
         <Stacks />

@@ -23,7 +23,7 @@ const links: navLinks[] = [
 
 function Index() {
   return (
-    <section className="grid grid-cols-2 py-16 ">
+    <section className="grid py-12  gap-7 md:py-16 md:grid-cols-2">
       <div className="col-span-1 ">
         <p className="font-Nunito font-light tracking-wide text-neutral-200">
           I design and build interfaces that people actually use. My work sits
@@ -52,8 +52,8 @@ function Index() {
           </motion.button>
         </div>
       </div>
-      <div className="place-items-end">
-        <ul className="flex flex-col gap-2 italic -skew-x-12 text-sm tracking-widest text-gray-200 uppercase">
+      <div className="md:place-items-end">
+        <ul className="flex flex-col gap-2 italic text-sm tracking-widest text-gray-200 uppercase md:-skew-x-12 ">
           <li>Index</li>
           {links.map((list) => (
             <motion.li

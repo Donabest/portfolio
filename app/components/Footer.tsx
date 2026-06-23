@@ -6,10 +6,10 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 function Footer() {
   return (
-    <footer className="border-t border-t-neutral-900">
+    <footer className="border-t border-t-neutral-900 px-4 lg:px-4">
       <div className="max-w-7xl mx-auto py-10 space-y-3">
         <h1 className="text-5xl font-instrumental italic">Don.</h1>
-        <div className="flex justify-between items-center pb-3">
+        <div className="flex flex-col items-start pb-3 space-y-2 md:space-y-0 md:justify-between md:items-center md:flex-row">
           <div className="flexItems space-x-4 uppercase font-mono tracking-wider text-neutral-700 text-sm">
             <p>Software Engineer</p>
             <span> &bull;</span>
@@ -34,7 +34,7 @@ function Footer() {
             ))}
           </div>
         </div>
-        <div className="flex justify-between items-center pt-6 text-neutral-700 text-sm border-t border-t-neutral-900 ">
+        <div className="flex flex-col items-start space-y-2  pt-6 text-neutral-700 text-sm border-t border-t-neutral-900 md:space-y-0 md:justify-between md:items-center ">
           <p>
             &copy; {new Date().getFullYear()} &bull; Rabiu Abdulazeez &bull; Don
             &bull; All Right Reserved.

@@ -5,7 +5,7 @@ import ProjectCard from "../components/ProjectCard";
 
 function page() {
   return (
-    <section className="py-24 max-w-6xl mx-auto">
+    <section className="py-24 px-6 lg:px-4 md:max-w-6xl mx-auto">
       <Link
         href="/"
         className="flex gap-2 items-center transition-colors hover:text-primary-400"

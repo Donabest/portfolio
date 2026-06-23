@@ -39,13 +39,16 @@ function ContactForm() {
   }
 
   return (
-    <form className="grid grid-cols-2 gap-4" onSubmit={handleSubmit}>
-      <div className="space-y-3">
+    <form
+      className="grid grid-cols-1 w-full  gap-4 mt-8 md:w-fit md:mt-0 md:grid-cols-2"
+      onSubmit={handleSubmit}
+    >
+      <div className="space-y-3 ">
         <label htmlFor="Email">Email</label>
         <input
           type="Email"
           placeholder="something@company.com"
-          className="w-80"
+          className="w-full md:w-80"
           required
           pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
           title="Please enter a valid email address (e.g., user@example.com)"
@@ -57,12 +60,12 @@ function ContactForm() {
         <input
           type="text"
           placeholder="A role,a job ,a inquiring "
-          className="w-80"
+          className="w-full md:w-80"
           required
           onChange={(e) => setForm({ ...form, subject: e.target.value })}
         />
       </div>
-      <div className=" space-y-3 col-span-2">
+      <div className=" space-y-3 md:col-span-2">
         <label htmlFor="Message">Message</label>
         <textarea
           placeholder="Tell me more about it"
@@ -81,7 +84,7 @@ function ContactForm() {
       </button>
 
       {status === "success" && (
-        <p className="text-green-400 text-sm text-start -translate-y-0.5 transition-transform duration-150">
+        <p className="text-green-400 text-sm -translate-y-0.5 transition-transform duration-150 md:text-start">
           Message sent!
           <span className="block">
             Thank you for Contacting I&apos;ll get back to you soon.
@@ -89,7 +92,7 @@ function ContactForm() {
         </p>
       )}
       {status === "error" && (
-        <p className="text-red-400 text-sm text-center  -translate-y-0.5 transition-transform duration-150">
+        <p className="text-red-400 text-sm -translate-y-0.5 transition-transform duration-150 md:text-center">
           Something went wrong. Try again or email me directly.
         </p>
       )}

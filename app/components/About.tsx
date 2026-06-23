@@ -11,9 +11,12 @@ const GithubActivity = dynamic(
 
 function About() {
   return (
-    <section id="About" className="border-t border-t-neutral-900 py-18">
+    <section
+      id="About"
+      className="border-t border-t-neutral-900 py-10 md:py-18"
+    >
       <Section num="01" section="About" />
-      <div className="grid grid-cols-2 gap-18 pt-18">
+      <div className="grid gap-18 pt-12 md:pt-18 md:grid-cols-2">
         <div className="font-Nunito font-normal text-neutral-300 ">
           <p>
             Hello, I&apos;m Rabiu Abdulazeez,also known as Don. A Frontend
@@ -61,7 +64,7 @@ function About() {
             </div>
           </div>
         </div>
-        <div className="col-span-2 max-w-4xl mx-auto px-6 py-3 border border-neutral-900 shadow-secondary-200 shadow-2xl  rounded-2xl">
+        <div className="md:col-span-2 max-w-md  mx-auto px-6 py-3 border border-neutral-900 shadow-secondary-200 shadow-2xl  rounded-2xl lg:max-w-4xl">
           {/* <h1 className="flex gap-1 pt-2 text-[17px] font-semibold font-mono uppercase">
               <span className="text-gray-50">&bull;</span>
               Spotify_Status
