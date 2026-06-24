@@ -94,7 +94,7 @@ function Navbar() {
       <MobileNavigation
         navLinks={navLinks}
         open={openNav}
-        close={() => setOpenNav(close)}
+        close={() => setOpenNav(false)}
       />
     </nav>
   );
