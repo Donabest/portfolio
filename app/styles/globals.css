@@ -72,6 +72,22 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.github-calendar-responsive,
+.github-calendar-responsive article,
+.github-calendar-responsive svg {
+  width: 100%;
+  max-width: 100%;
+}
+
+.github-calendar-responsive article {
+  min-width: 0;
+}
+
+.github-calendar-responsive svg {
+  height: auto;
+}
+
 .hamburger {
   cursor: pointer;
   width: 24px;

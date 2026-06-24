@@ -40,7 +40,7 @@ function Navbar() {
   });
   return (
     <nav
-      className="fixed top-0 w-full p-4 text-smtext-gray-100 backdrop-blur-2xl border-b border-b-gray-900 uppercase tracking-widest z-99"
+      className="fixed top-0 w-full p-4 text-sm text-gray-100 backdrop-blur-2xl border-b border-b-gray-900 uppercase tracking-widest z-99"
       ref={clickref}
     >
       <div className="flex justify-between items-center max-w-7xl mx-auto">

@@ -23,8 +23,8 @@ const links: navLinks[] = [
 
 function Index() {
   return (
-    <section className="grid py-12  gap-7 md:py-16 md:grid-cols-2">
-      <div className="col-span-1 ">
+    <section className="grid py-12 gap-7 md:py-16 md:grid-cols-2">
+      <div className="col-span-1">
         <p className="font-Nunito font-light tracking-wide text-neutral-200">
           I design and build interfaces that people actually use. My work sits
           at the intersection of clean code and intentional design, components
@@ -33,17 +33,17 @@ function Index() {
           building in public.
         </p>
 
-        <div className="flex gap-6 items-center mt-6 font-mono text-xs">
+        <div className="flex flex-col gap-3 mt-6 font-mono text-xs sm:flex-row sm:flex-wrap sm:items-center sm:gap-6">
           <motion.button
             type="button"
-            className="bg-primary-100 text-secondary-100 px-10 py-3 uppercase tracking-widest cursor-pointer transition-colors hover:bg-primary-400 "
+            className="w-full bg-primary-100 text-secondary-100 px-6 py-3 uppercase tracking-widest cursor-pointer transition-colors hover:bg-primary-400 sm:w-auto sm:px-10"
             whileHover={{ y: -2 }}
           >
             <a href="#Projects"> View_Projects</a>
           </motion.button>
           <motion.button
             type="button"
-            className=" px-3 md:px-10 py-3 border border-neutral-800 uppercase tracking-widest cursor-pointer transition-colors hover:border-neutral-400"
+            className="w-full px-6 py-3 border border-neutral-800 uppercase tracking-widest cursor-pointer transition-colors hover:border-neutral-400 sm:w-auto md:px-10"
             whileHover={{ y: -2 }}
           >
             <a href="#Contact" className="flexItems gap-2">
@@ -53,7 +53,7 @@ function Index() {
         </div>
       </div>
       <div className="md:place-items-end">
-        <ul className="flex flex-col gap-2 italic text-sm tracking-widest text-gray-200 uppercase md:-skew-x-12 ">
+        <ul className="flex flex-col gap-2 italic text-sm tracking-widest text-gray-200 uppercase md:-skew-x-12">
           <li>Index</li>
           {links.map((list) => (
             <motion.li

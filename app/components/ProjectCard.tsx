@@ -8,7 +8,7 @@ type projectProp = { project: project };
 function ProjectCard({ project }: projectProp) {
   return (
     <div className="group rounded-xl border border-neutral-800 overflow-hidden bg-neutral-950 hover:border-neutral-700 transition-colors duration-150">
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden aspect-[16/10]">
         <Image
           src={project.image}
           alt={project.title}
@@ -41,16 +41,16 @@ function ProjectCard({ project }: projectProp) {
 
         <div className="border-t border-neutral-800" />
 
-        <div className="flex items-center gap-3 pt-1">
+        <div className="flex flex-wrap items-center gap-3 pt-1">
           <a
             href={project.demo}
-            className="flex items-center gap-1.5 text-sm font-medium bg-white text-black px-4 py-1.5 rounded-lg hover:bg-neutral-200 transition-colors"
+            className="flex items-center justify-center gap-1.5 text-sm font-medium bg-white text-black px-4 py-1.5 rounded-lg hover:bg-neutral-200 transition-colors"
           >
             Live demo <ArrowUpRight size={14} />
           </a>
           <a
             href={project.github}
-            className="flex items-center gap-1.5 text-sm font-medium border border-neutral-700 text-neutral-300 px-4 py-1.5 rounded-lg hover:border-neutral-500 hover:text-white transition-colors"
+            className="flex items-center justify-center gap-1.5 text-sm font-medium border border-neutral-700 text-neutral-300 px-4 py-1.5 rounded-lg hover:border-neutral-500 hover:text-white transition-colors"
           >
             GitHub <SiGithub size={13} />
           </a>

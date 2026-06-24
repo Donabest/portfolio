@@ -9,12 +9,12 @@ import Contact from "./components/Contact";
 
 function page() {
   return (
-    <div className="w-full overflow-hidden">
-      <div className="px-6 max-w-7xl mx-auto ">
+    <div className="w-full">
+      <div className="px-4 sm:px-6 max-w-7xl mx-auto">
         <Hero />
       </div>
       <Tape />
-      <div className=" px-6 max-w-7xl mx-auto ">
+      <div className="px-4 sm:px-6 max-w-7xl mx-auto">
         <Index />
         <About />
         <Stacks />

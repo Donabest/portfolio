@@ -6,16 +6,16 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 function Footer() {
   return (
-    <footer className="border-t border-t-neutral-900 px-4 lg:px-4">
+    <footer className="border-t border-t-neutral-900 px-4">
       <div className="max-w-7xl mx-auto py-10 space-y-3">
         <h1 className="text-5xl font-instrumental italic">Don.</h1>
         <div className="flex flex-col items-start pb-3 space-y-2 md:space-y-0 md:justify-between md:items-center md:flex-row">
-          <div className="flexItems space-x-4 uppercase font-mono tracking-wider text-neutral-700 text-sm">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 uppercase font-mono tracking-wider text-neutral-700 text-sm">
             <p>Software Engineer</p>
             <span> &bull;</span>
             <p>Shopify Dev</p>
           </div>
-          <div className="flexItems space-x-2">
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-2">
             {socialContact.map((contact) => (
               <Link href={contact.link} key={contact.link} className="group ">
                 <motion.span
@@ -28,13 +28,12 @@ function Footer() {
                     size={13}
                     className="text-gray-200 group-hover:text-primary-100 group-hover:scale-120"
                   />
-                  &nbsp;
                 </motion.span>
               </Link>
             ))}
           </div>
         </div>
-        <div className="flex flex-col items-start space-y-2  pt-6 text-neutral-700 text-sm border-t border-t-neutral-900 md:space-y-0 md:justify-between md:items-center ">
+        <div className="flex flex-col items-start gap-2 pt-6 text-neutral-700 text-sm border-t border-t-neutral-900 md:justify-between md:items-center md:flex-row">
           <p>
             &copy; {new Date().getFullYear()} &bull; Rabiu Abdulazeez &bull; Don
             &bull; All Right Reserved.

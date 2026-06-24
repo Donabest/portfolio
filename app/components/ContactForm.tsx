@@ -40,7 +40,7 @@ function ContactForm() {
 
   return (
     <form
-      className="grid grid-cols-1 w-full  gap-4 mt-8 md:w-fit md:mt-0 md:grid-cols-2"
+      className="grid grid-cols-1 w-full gap-4 mt-8 md:w-full md:max-w-2xl md:mt-0 md:grid-cols-2"
       onSubmit={handleSubmit}
     >
       <div className="space-y-3 ">
@@ -48,7 +48,7 @@ function ContactForm() {
         <input
           type="Email"
           placeholder="something@company.com"
-          className="w-full md:w-80"
+          className="w-full"
           required
           pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
           title="Please enter a valid email address (e.g., user@example.com)"
@@ -60,7 +60,7 @@ function ContactForm() {
         <input
           type="text"
           placeholder="A role,a job ,a inquiring "
-          className="w-full md:w-80"
+          className="w-full"
           required
           onChange={(e) => setForm({ ...form, subject: e.target.value })}
         />
@@ -77,7 +77,7 @@ function ContactForm() {
 
       <button
         type="submit"
-        className="flex items-center justify-center gap-2 bg-primary-200 text-black py-2 font-mono tracking-wide w-50 cursor-pointer hover:bg-primary-400 hover:scale-x-101"
+        className="flex w-full items-center justify-center gap-2 bg-primary-200 text-black py-2 font-mono tracking-wide cursor-pointer hover:bg-primary-400 hover:scale-x-101 sm:w-50"
       >
         {status === "loading" ? "sending..." : "Send Message "}
         <MoveRight size={14} />

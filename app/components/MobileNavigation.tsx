@@ -1,4 +1,4 @@
-"use clients";
+"use client";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { navLinks } from "../utilities/type";
