@@ -115,7 +115,7 @@ export default function RootLayout({
         "scroll-smooth",
       )}
     >
-      <body className="h-full antialiased bg-secondary-100 text-gray-50 overflow-x-hidden">
+      <body className="h-full antialiased bg-secondary-100 text-gray-50 ">
         <script
           type="application/id+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonId) }}

@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @config "../../tailwind.config.js";
+
 @theme {
   --font-instrumental:
     var(--font-instrument-serif), Inter, system-ui, sans-serif;

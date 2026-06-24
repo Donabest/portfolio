@@ -6,7 +6,7 @@ function Hero() {
   return (
     <section
       id="Home"
-      className="relative flex flex-col items-start mt-25 md:flex-row md:items-baseline-last md:align-middle gap-4 md:mt-40 md:max-w-7xl md:justify-center"
+      className="relative flex flex-col items-start mt-25  md:flex-row md:items-baseline-last md:align-middle gap-4 md:mt-40 md:mx-w-7xl md:justify-center"
     >
       <div className="flex flex-col text-xs  font-sans italic uppercase opacity-70 md:text-sm ">
         <span>Portfolio /{new Date().getFullYear()}, </span>

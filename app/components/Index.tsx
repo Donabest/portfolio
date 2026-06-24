@@ -43,10 +43,10 @@ function Index() {
           </motion.button>
           <motion.button
             type="button"
-            className=" px-10 py-3 border border-neutral-800 uppercase tracking-widest cursor-pointer transition-colors hover:border-neutral-400"
+            className=" px-3 md:px-10 py-3 border border-neutral-800 uppercase tracking-widest cursor-pointer transition-colors hover:border-neutral-400"
             whileHover={{ y: -2 }}
           >
-            <a href="#Contact" className="flexItems  gap-2">
+            <a href="#Contact" className="flexItems gap-2">
               Start a Projects <MoveRight size={15} />
             </a>
           </motion.button>

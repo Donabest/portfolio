@@ -13,12 +13,12 @@ function About() {
   return (
     <section
       id="About"
-      className="border-t border-t-neutral-900 py-10 md:py-18"
+      className="border-t border-t-neutral-900 py-10  md:py-18"
     >
       <Section num="01" section="About" />
-      <div className="grid gap-18 pt-12 md:pt-18 md:grid-cols-2">
+      <div className="md:grid gap-18 pt-12 md:pt-18 md:grid-cols-2">
         <div className="font-Nunito font-normal text-neutral-300 ">
-          <p>
+          <p className="wrap-reak-words">
             Hello, I&apos;m Rabiu Abdulazeez,also known as Don. A Frontend
             Engineer with a thing for clean interfaces and thoughtful
             experiences. I get a genuine kick out of taking an idea and turning

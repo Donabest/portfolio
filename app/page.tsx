@@ -9,19 +9,19 @@ import Contact from "./components/Contact";
 
 function page() {
   return (
-    <>
-      <div className="px-6 lg:max-w-7xl md:px-4 mx-auto ">
+    <div className="w-full overflow-hidden">
+      <div className="px-6 max-w-7xl mx-auto ">
         <Hero />
       </div>
       <Tape />
-      <div className="px-6 lg:max-w-7xl md:px-4 mx-auto">
+      <div className=" px-6 max-w-7xl mx-auto ">
         <Index />
         <About />
         <Stacks />
         <Projects />
         <Contact />
       </div>
-    </>
+    </div>
   );
 }
 
