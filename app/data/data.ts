@@ -115,12 +115,12 @@ export const Others = [
 
 export const socialContact = [
   {
-    link: "https://twitter/@donfttp",
+    link: "https://x.com/donfttp",
     social: "Twitter",
     socialUsername: "@donftp",
   },
   {
-    link: "https://x.com/donfttp",
+    link: "https://github.com/Donabest",
     social: "Github",
     socialUsername: "Donabest ",
   },
