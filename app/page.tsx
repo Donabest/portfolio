@@ -16,6 +16,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 function Page() {
   const [ready, setReady] = useState(() => {
+    if (typeof window === "undefined") return false;
     return sessionStorage.getItem("initialized") === "true";
   });
 
