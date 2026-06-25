@@ -6,23 +6,53 @@ import About from "./components/About";
 import Stacks from "./components/Stacks";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import Initialization from "./components/Initialization";
+import { useCallback, useState } from "react";
+import { cn } from "@/app/lib/utils";
+import Navbar from "./components/Navbar";
+import FloatQuickContact from "./components/FloatQuickContact";
+import Footer from "./components/Footer";
+import { AnimatePresence, motion } from "framer-motion";
 
-function page() {
+function Page() {
+  const [ready, setReady] = useState(() => {
+    return sessionStorage.getItem("initialized") === "true";
+  });
+
+  const handler = useCallback(() => {
+    sessionStorage.setItem("initialized", "true");
+    setReady(true);
+  }, []);
+
   return (
-    <div className="w-full">
-      <div className="px-4 sm:px-6 max-w-7xl mx-auto">
-        <Hero />
-      </div>
-      <Tape />
-      <div className="px-4 sm:px-6 max-w-7xl mx-auto">
-        <Index />
-        <About />
-        <Stacks />
-        <Projects />
-        <Contact />
-      </div>
-    </div>
+    <>
+      {!ready && <Initialization handler={handler} />}
+      {ready && (
+        <AnimatePresence mode="wait">
+          <Navbar />
+          <motion.div
+            className={cn("w-full transition-opacity duration-200")}
+            initial={{ opacity: 0, y: -2 }}
+            animate={{ opacity: 100, y: 0 }}
+          >
+            <div className="px-4 sm:px-6 max-w-7xl mx-auto">
+              <Hero />
+            </div>
+            <Tape />
+            <div className="px-4 sm:px-6 max-w-7xl mx-auto">
+              <Index />
+              <About />
+              <Stacks />
+              <Projects />
+              <Contact />
+            </div>
+          </motion.div>
+          <FloatQuickContact />
+          <Footer />
+        </AnimatePresence>
+      )}
+    </>
   );
 }
 
-export default page;
+export default Page;

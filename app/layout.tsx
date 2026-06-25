@@ -7,9 +7,6 @@ import {
 } from "next/font/google";
 import "@/app/styles/globals.css";
 import { cn } from "./lib/utils";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import FloatQuickContact from "./components/FloatQuickContact";
 
 const MontserratSans = Montserrat({
   variable: "--font-montserrat-sans",
@@ -115,17 +112,12 @@ export default function RootLayout({
         "scroll-smooth",
       )}
     >
-      <body className="h-full antialiased bg-secondary-100 text-gray-50 ">
+      <body className="h-full antialiased bg-secondary-100 text-gray-50 selection:bg-white selection:text-black">
         <script
           type="application/id+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonId) }}
         />
-        <main>
-          <Navbar />
-          {children}
-          <FloatQuickContact />
-          <Footer />
-        </main>
+        <main>{children}</main>
       </body>
     </html>
   );
