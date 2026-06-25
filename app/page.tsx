@@ -7,7 +7,7 @@ import Stacks from "./components/Stacks";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Initialization from "./components/Initialization";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { cn } from "@/app/lib/utils";
 import Navbar from "./components/Navbar";
 import FloatQuickContact from "./components/FloatQuickContact";
@@ -20,10 +20,18 @@ function Page() {
     return sessionStorage.getItem("initialized") === "true";
   });
 
+  const [hydrated, setHydrated] = useState(false);
+
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
+
   const handler = useCallback(() => {
     sessionStorage.setItem("initialized", "true");
     setReady(true);
   }, []);
+
+  if (!hydrated) return null;
 
   return (
     <>
