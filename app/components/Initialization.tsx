@@ -68,19 +68,19 @@ function Initialization({ handler }: { handler: () => void }) {
       {!finished && (
         <div
           className={cn(
-            "flex flex-col justify-center items-center h-screen tracking-wider",
+            "flex flex-col justify-center items-center h-screen tracking-wider max-sm:h-auto max-sm:min-h-dvh max-sm:px-4 max-sm:py-6",
           )}
         >
-          <div className="flex flex-col space-y-4 italic text-sm ">
-            <div className="italic text-gray-200 text-sm">
+          <div className="flex flex-col space-y-4 italic text-sm max-sm:w-full max-sm:space-y-3 max-sm:text-xs">
+            <div className="italic text-gray-200 text-sm max-sm:text-xs">
               <h3 className="text-[#eeab54]">DON/OS [Build 0.0.0.0.26100]</h3>
               <p className="font-intrumental">
                 &copy; Rabiu Abdulazeez Corporation. All rights reserved.
               </p>
             </div>
 
-            <div className="px-6 py-4 space-y-3 bg-secondary-200 border border-secondary-400 shadow-lg rounded-lg ">
-              <div>
+            <div className="px-6 py-4 space-y-3 bg-secondary-200 border border-secondary-400 shadow-lg rounded-lg max-sm:max-h-[78dvh] max-sm:w-full max-sm:overflow-y-auto max-sm:overflow-x-hidden max-sm:px-3 max-sm:py-3">
+              <div className="max-sm:wrap-break-word">
                 <span>C:\Users\Visitor\&gt; {command}</span>
                 {phase === 0 && <span className="animate-pulse">|</span>}
               </div>
@@ -92,7 +92,7 @@ function Initialization({ handler }: { handler: () => void }) {
                       visible.includes(1)
                         ? "opacity-100 translate-y-0"
                         : "opacity-0 translate-y-2",
-                      "duration-150 transition-all space-y-3",
+                      "duration-150 transition-all space-y-3 max-sm:wrap-break-word",
                     )}
                   >
                     <div>
@@ -113,19 +113,19 @@ function Initialization({ handler }: { handler: () => void }) {
                 </>
               )}
 
-              <div>
+              <div className="max-sm:wrap-break-word">
                 <span>{moduleInstalling}</span>
                 {phase === 2 && <span className="animate-pulse">|</span>}
               </div>
 
               {phase >= 3 && (
-                <div className="tracking-widest">
+                <div className="tracking-widest max-sm:tracking-normal">
                   <ul>
                     {steps.map((step, i) => (
                       <li
                         key={i}
                         className={cn(
-                          "transition-opacity duration-300",
+                          "transition-opacity duration-300 max-sm:wrap-break-word",
                           visibleSteps.includes(i)
                             ? "opacity-100"
                             : "opacity-0",
@@ -138,7 +138,7 @@ function Initialization({ handler }: { handler: () => void }) {
                 </div>
               )}
 
-              <div>
+              <div className="max-sm:wrap-break-word">
                 {start && (
                   <p>
                     <span className=" text-[#F2A33D]">&gt; </span>
@@ -161,7 +161,7 @@ function Initialization({ handler }: { handler: () => void }) {
               </div>
 
               {welcome && (
-                <div className="text-white/80">
+                <div className="text-white/80 max-sm:wrap-break-word">
                   <p>C:\Users\Visitor\&gt; {welcome}</p>
                 </div>
               )}
