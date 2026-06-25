@@ -78,6 +78,7 @@ function Navbar() {
           </p>
 
           <button
+            title="button"
             className={cn(
               openNav && "open",
               "z-30 block md:hidden focus:outline-none hamburger ",

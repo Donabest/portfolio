@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { type navLinks } from "../utilities/type";
 import { MoveRight } from "lucide-react";
+import Link from "next/link";
 
 const links: navLinks[] = [
   {
@@ -39,16 +40,16 @@ function Index() {
             className="w-full bg-primary-100 text-secondary-100 px-6 py-3 uppercase tracking-widest cursor-pointer transition-colors hover:bg-primary-400 sm:w-auto sm:px-10"
             whileHover={{ y: -2 }}
           >
-            <a href="#Projects"> View_Projects</a>
+            <Link href="#Projects"> View_Projects</Link>
           </motion.button>
           <motion.button
             type="button"
             className="w-full px-6 py-3 border border-neutral-800 uppercase tracking-widest cursor-pointer transition-colors hover:border-neutral-400 sm:w-auto md:px-10"
             whileHover={{ y: -2 }}
           >
-            <a href="#Contact" className="flexItems gap-2">
+            <Link href="#Contact" className="flexItems gap-2">
               Start a Projects <MoveRight size={15} />
-            </a>
+            </Link>
           </motion.button>
         </div>
       </div>
